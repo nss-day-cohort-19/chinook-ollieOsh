@@ -6,3 +6,4 @@ e.FirstName as "Sales Agent First Name", e.LastName as "Sales Agent First Name"
 from Invoice i, Customer c, Employee e
 where i.CustomerId = c.CustomerId
 and c.SupportRepId = e.EmployeeId
+order by e.FirstName, i.BillingCountry, i.Total desc
